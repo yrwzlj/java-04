@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${Book.name}"></p><br>
+<p th:text="${Book.author}"></p><br>
+<p th:text="${Book.category}"></p><br>
+<p th:text="${Book.profile}"></p><br>
+<a th:href="@{/website}">确定</a>
+<!--通过参数赋值 我前端不大懂-->
+<a th:href="@{/fileDown(name=game)}">下载该书</a>
+</body>
+</html>
