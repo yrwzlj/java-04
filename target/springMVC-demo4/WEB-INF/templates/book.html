@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NovelWebsite</title>
+</head>
+<body>
+<h1>首页</h1>
+<form th:action="@{/BookSearchById}" method="post">
+    书名：<input type="text" name="name"><br>
+    <input type="submit" value="按书名搜索"><br>
+</form>
+<form th:action="@{/BookSearchByAuthor}" method="post">
+    书名：<input type="text" name="author"><br>
+    <input type="submit" value="按作者搜索"><br>
+</form>
+<h1>添加新书</h1>
+<form th:action="@{/fileUp}" method="post" enctype="multipart/form-data">
+    小说名字: <input type="text" name="name"><br>
+    作者: <input type="text" name="author"><br>
+    类别: <input type="text" name="category"><br>
+    简介: <input type="text" name="profile"><br>
+    小说内容文件: <input type="file" name="novel"><br>
+    <input type="submit" value="上传">
+</form>
+</body>
+</html>
